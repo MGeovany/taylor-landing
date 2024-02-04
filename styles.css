@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "finger-paint";
+  src: url("./assets/fonts/FingerPaint-Regular.ttf");
+}
+
+@font-face {
+  font-family: "a-day";
+  src: url("./assets/fonts/A-day-without-sun-trial.otf");
+}
+
+@media only screen and (max-width: 1090px) {
+  .bio_section {
+    flex-wrap: wrap;
+  }
+
+  .date_block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
+
+body {
+  background-color: #d1cabc;
+}
+
+section {
+  margin: 4rem;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 5rem;
+  font-family: "finger-paint", sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: "a-day", sans-serif;
+  letter-spacing: 2rem;
+  font-weight: 900;
+}
+
+.bio_section {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.bio_img_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  min-height: 640px;
+}
+
+.bio_paragraph_card {
+  background-color: #ac947a;
+  width: 100%;
+  height: fit-content;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #564137;
+}
+
+.bio_paragraph {
+  font-family: monospace;
+  padding: 0 2rem;
+  line-height: 2.2rem;
+  color: white;
+  font-size: x-large;
+  text-align: center;
+}
+
+.bio_sign {
+  display: flex;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.bio_section_img {
+  max-height: 640px;
+  max-width: 640px;
+}
+
+.bio_sign_img {
+  width: 300px;
+  height: 150px;
+
+  padding: 0 2rem 2rem 0;
+}
+
+.albums_section {
+  height: 100vh;
+
+  position: relative;
+}
+
+.albums_section_text-child {
+  position: absolute;
+  top: 20%;
+}
+
+.albums_section_text-button {
+  text-align: center;
+  margin: 4rem 0;
+}
+.albums_section_text-button > a {
+  background-color: #56413790;
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.albums_section_img {
+  max-width: 100%;
+  height: auto;
+}
+
+.albums_section_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.albums_section_text-child {
+  width: fit-content;
+}
+
+.albums_section_text-child > h1 {
+  margin: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  color: white;
+
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.albums_section_text-child > h2 {
+  margin: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  color: #59463e;
+  text-align: end;
+  font-size: 3rem;
+}
+
+.albums_section_text-child-child {
+  width: fit-content;
+}
+
+.tour_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.tour_section > img {
+  width: 490px;
+  height: auto;
+}
+
+.tour_section > p {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.5rem;
+}
+
+.date_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: #8ea3c5;
+  align-items: center;
+}
+
+.date_block > img {
+  width: auto;
+  height: 530px;
+  margin: 2rem 4rem;
+}
+
+.date_block .date {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.date_block .place {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.3rem;
+}
+
+.date_block > ul {
+  margin: 0 2rem;
+  padding: 3rem 0;
+  width: 40%;
+  text-align: start;
+  justify-content: center;
+  height: fit-content;
+}
+
+.date_block li {
+  margin-bottom: 2rem;
+}
+
+.date_block li:nth-child(1) {
+  color: #acf1ae;
+}
+
+.date_block li:nth-child(2) {
+  color: #f2c78a;
+}
+
+.date_block li:nth-child(3) {
+  color: #efb1f3;
+}
+
+.date_block li:nth-child(4) {
+  color: #7c0807;
+}
+
+.date_block li:nth-child(5) {
+  color: #47689a;
+}
