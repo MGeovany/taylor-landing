@@ -1,25 +1,48 @@
-@font-face {
-  font-family: "finger-paint";
-  src: url("./assets/fonts/FingerPaint-Regular.ttf");
+/* 
+ * RESET DEFAULT STYLES
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-@font-face {
-  font-family: "a-day";
-  src: url("./assets/fonts/A-day-without-sun-trial.otf");
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-@media only screen and (max-width: 1090px) {
-  .bio_section {
-    flex-wrap: wrap;
-  }
-
-  .date_block {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul li {
@@ -40,8 +63,64 @@ button {
   -moz-osx-font-smoothing: inherit;
 }
 
+input {
+  outline: none;
+}
+
+/* 
+ * FONTS
+ */
+
+@font-face {
+  font-family: "finger-paint";
+  src: url("./assets/fonts/FingerPaint-Regular.ttf");
+}
+
+@font-face {
+  font-family: "a-day";
+  src: url("./assets/fonts/A-day-without-sun-trial.otf");
+}
+
+/* 
+ * BREAKPOINTS
+ */
+
+@media only screen and (max-width: 1090px) {
+  .bio_section {
+    flex-wrap: wrap;
+  }
+
+  .date_block {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* 
+ * VARIABLES
+ */
+
+:root {
+  --bg-color: #d1cabc;
+  --primary-color: #564137;
+  --secondary-color: #aa9077;
+  --tertiary-color: #6c86a4;
+
+  --green-color: #acf1ae;
+  --yellow-color: #f2c78a;
+  --pink-color: #efb1f3;
+  --wine-color: #7c0807;
+  --blue-color: #47689a;
+}
+
+/* 
+ * WEBSITE STYLES
+ */
+
 body {
-  background-color: #d1cabc;
+  background-color: var(--bg-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 section {
@@ -79,7 +158,7 @@ h2 {
 }
 
 .bio_paragraph_card {
-  background-color: #ac947a;
+  background-color: var(--secondary-color);
   width: 100%;
   height: fit-content;
   margin: 1rem 0;
@@ -87,7 +166,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  color: #564137;
+  color: var(--primary-color);
 }
 
 .bio_paragraph {
@@ -135,7 +214,8 @@ h2 {
   margin: 4rem 0;
 }
 .albums_section_text-button > a {
-  background-color: #56413790;
+  background-color: var(--primary-color);
+  opacity: 0.8;
   cursor: pointer;
   padding: 1rem;
   color: white;
@@ -176,7 +256,7 @@ h2 {
   margin: 0;
   margin-block-end: 0;
   margin-block-start: 0;
-  color: #59463e;
+  color: var(--primary-color);
   text-align: end;
   font-size: 3rem;
 }
@@ -210,7 +290,7 @@ h2 {
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  background-color: #8ea3c5;
+  background-color: var(--tertiary-color);
   align-items: center;
 }
 
@@ -245,21 +325,137 @@ h2 {
 }
 
 .date_block li:nth-child(1) {
-  color: #acf1ae;
+  color: var(--green-color);
 }
 
 .date_block li:nth-child(2) {
-  color: #f2c78a;
+  color: var(--yellow-color);
 }
 
 .date_block li:nth-child(3) {
-  color: #efb1f3;
+  color: var(--pink-color);
 }
 
 .date_block li:nth-child(4) {
-  color: #7c0807;
+  color: var(--wine-color);
 }
 
 .date_block li:nth-child(5) {
-  color: #47689a;
+  color: var(--blue-color);
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+nav ul li:hover {
+  background-color: var(--secondary-color);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+
+  transition: background-color 0.3s ease;
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--bg-color);
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-bar button:hover {
+  background-color: var(--primary-color);
+}
+
+.home_section {
+  margin: 0;
+  padding: 0;
+}
+
+.home_section > img {
+  width: 100%;
+  position: absolute;
+}
+
+.home_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.home_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 6rem;
+  justify-content: space-between;
+}
+
+.hero_text > h1 {
+  color: #6c86a4;
+  font-size: 6.5rem;
+}
+
+.hero_text > h2 {
+  margin: -2rem 0;
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  letter-spacing: 1.4rem;
+}
+
+.home_section-button {
+  text-align: center;
+  margin: 4rem 0;
+}
+.home_section-button > a {
+  background-color: var(--tertiary-color);
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin: auto;
 }

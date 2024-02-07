@@ -8,7 +8,35 @@
 </head>
 
 <body>
-  <section class="bio_section">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#bio">bio</a></li>
+        <li><a href="#albums">albums</a></li>
+        <li><a href="#concerts">concerts</a></li>
+        <li><a href="#merchandise">merchandise</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar...">
+      <button type="submit">Buscar</button>
+    </div>
+  </header>
+  <section class="home_section" id="home">
+    <img src="./assets/img/tayl.jpeg" />
+    <div class="home_container">
+      <div></div>
+      <div class="hero_text">
+        <h1>Taylor Swift</h1>
+        <h2>ARTIST OF THE YEAR</h2>
+        <div class="home_section-button">
+          <a href="https://tstheerastour.taylorswift.com/" target="_blank">Listen now!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bio_section" id="bio">
     <div class="bio_img_card">
       <img class="bio_section_img" src="./assets/img/perfilTS.jpg" />
     </div>
@@ -27,7 +55,7 @@
       </div>
     </div>
   </section>
-  <section class="albums_section">
+  <section class="albums_section" id="albums">
     <img class="albums_section_img" src="./assets//img/bannerTS.jpg" />
     <div class="albums_section_text">
       <div class="albums_section_text-child">
@@ -38,7 +66,7 @@
         </div>
       </div>
   </section>
-  <section class="tour_section">
+  <section class="tour_section" id="concerts">
     <img src="./assets/img/logoTS.png" />
     <p>AUSTRALIA 2024</p>
     <div class="date_block">
